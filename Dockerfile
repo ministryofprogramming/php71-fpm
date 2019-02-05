@@ -6,6 +6,7 @@ RUN apt-get update
 RUN apt-get install libpq-dev -y
 RUN docker-php-ext-install pdo_pgsql
 RUN docker-php-ext-install bcmath
+RUN docker-php-ext-install pcntl
 RUN usermod -u 1000 www-data
 RUN apt-get install -y supervisor
 RUN apt-get install -y gnupg
